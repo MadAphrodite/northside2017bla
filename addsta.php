@@ -70,4 +70,5 @@ include('includes/header.php');
            <input type="submit" value="Submit" class="btn btn-primary">
   </form>
   
+  
   <?php include('includes/footer.php'); ?>
