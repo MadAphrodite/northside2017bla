@@ -21,17 +21,17 @@ CREATE TABLE artist
 
 /* INSERTING DATA INTO ARTIST TABLE */
 
-INSERT INTO artist (artist_id, artist_name, artist_country, artist_music_style) VALUES
-(NULL, 'Primus', 'USA', 'Rock'),
-(NULL, 'Tina Dico', 'Denmark', 'Rock'),
-(NULL, 'Mø', 'Denmark', 'Electropop'),
-(NULL, 'Soulwax', 'Belgium', 'Rock-Electronic'),
-(NULL, 'Veronica Maggio', 'Sweden', 'Soulpop'),
-(NULL, 'Run the Jewels', 'USA', 'Hip-Hop'),
-(NULL, 'Bastille', 'UK', 'Indiepop' ),
-(NULL, 'Frank Ocean', 'USA', 'R&B'),
-(NULL, 'Off Bloom', 'Denmark', 'Pop'),
-(NULL, 'Cigarettes After Sex', 'USA', 'Pop');
+INSERT INTO artist (artist_name, artist_country, artist_music_style) VALUES
+('Primus', 'USA', 'Rock'),
+('Tina Dico', 'Denmark', 'Rock'),
+('Mø', 'Denmark', 'Electropop'),
+('Soulwax', 'Belgium', 'Rock-Electronic'),
+('Veronica Maggio', 'Sweden', 'Soulpop'),
+('Run the Jewels', 'USA', 'Hip-Hop'),
+('Bastille', 'UK', 'Indiepop' ),
+('Frank Ocean', 'USA', 'R&B'),
+('Off Bloom', 'Denmark', 'Pop'),
+('Cigarettes After Sex', 'USA', 'Pop');
 
 
 /* CREATE STAGE TABLE */
@@ -46,9 +46,9 @@ CREATE TABLE stage
 /* INSERTING DATA INTO STAGE TABLE */
 
 INSERT INTO stage (stage_id, stage_name) VALUES
-(NULL, 'Red Stage'),
-(NULL, 'Green Stage'),
-(NULL, 'Blue Stage');
+(1, 'Red Stage'),
+(2, 'Green Stage'),
+(3, 'Blue Stage');
 
 
 /* CREATING STAGEARTIST TABLE */
@@ -65,16 +65,16 @@ CREATE TABLE performances
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /* INSERTING DATA INTO STAGEARTIST TABLE */
 
-INSERT INTO performances (sta_id, artist_id, stage_id, sta_date) VALUES
-(NULL, 1, 3, '2017-05-26 16:30:00'),
-(NULL, 2, 3, '2017-05-26 19:00:00'),
-(NULL, 3, 3, '2017-05-26 21:45:00'),
-(NULL, 4, 3, '2017-05-27 01:00:00'),
-(NULL, 5, 2, '2017-05-27 15:15:00'),
-(NULL, 6, 2, '2017-05-27 17:45:00'),
-(NULL, 7, 2, '2017-05-28 20:15:00'),
-(NULL, 8, 2, '2017-05-28 23:15:00'),
-(NULL, 9, 1, '2017-05-28 14:00:00'),
-(NULL, 10, 1, '2017-05-28 16:30:00');
+INSERT INTO performances (artist_id, stage_id, sta_date) VALUES
+(1, 3, '2017-05-26 16:30:00'),
+(2, 3, '2017-05-26 19:00:00'),
+(3, 3, '2017-05-26 21:45:00'),
+(4, 3, '2017-05-27 01:00:00'),
+(5, 2, '2017-05-27 15:15:00'),
+(6, 2, '2017-05-27 17:45:00'),
+(7, 2, '2017-05-28 20:15:00'),
+(8, 2, '2017-05-28 23:15:00'),
+(9, 1, '2017-05-28 14:00:00'),
+(10, 1, '2017-05-28 16:30:00');
 
 /* FIRST CREATE STAGE AND ARTIST TABLE, it's like child can't exist without a mother. STAGE and ARTIST are mother.*/
